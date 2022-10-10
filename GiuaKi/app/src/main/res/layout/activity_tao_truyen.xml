@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/items"
+    tools:context=".TaoTruyen">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+                    <Button
+                        android:id="@+id/btn_Back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Back"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:id="@+id/content">
+                            <EditText
+                                android:id="@+id/TheLoai"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="15"
+                                android:hint="Thể loại truyện"
+                                android:textSize="20dp" />
+                            <EditText
+                                android:id="@+id/MoTaTruyen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="160dp"
+                                android:layout_marginBottom="10dp"
+                                android:ems="15"
+                                android:hint="Mô tả truyện"
+                                android:textSize="20dp"
+                                android:gravity="top"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_below="@+id/content"
+                        android:layout_marginTop="20dp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                    <Button
+                                        android:id="@+id/ThemDS"
+                                        android:layout_width="140dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="15dp"
+                                        android:backgroundTint="@color/black"
+                                        android:text="Thêm Vào Danh Sách"
+                                        android:textSize="15dp" />
+                            </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

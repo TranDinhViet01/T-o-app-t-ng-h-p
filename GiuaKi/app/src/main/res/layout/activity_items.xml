@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_start_color"
+        android:padding="5dp"
+        >
+        <ImageView
+            android:id="@+id/Hinh"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:padding="10dp"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_toRightOf="@+id/Hinh"
+            android:id="@+id/TenTruyen"
+            android:text="Tên Truyện"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_below="@+id/TenTruyen"
+            android:layout_toRightOf="@id/Hinh"
+            android:gravity="bottom"
+            android:id="@+id/chuongTruyen"
+            android:text="Số chương : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#F006"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_below="@+id/chuongTruyen"
+            android:layout_toRightOf="@id/Hinh"
+            android:gravity="bottom"
+            android:id="@+id/LuotTruyCap"
+            android:text="Lượt truy cập : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#F006"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</RelativeLayout>
