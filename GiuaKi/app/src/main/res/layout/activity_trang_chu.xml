@@ -7,9 +7,9 @@
     tools:context=".TrangChu"
     android:gravity="center_vertical"
     android:background="@drawable/items">
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:id="@+id/content">
 
@@ -18,44 +18,72 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginBottom="100dp"
-            android:text="Đăng nhập thành công"
-            android:textColor="@color/black"
-            android:textSize="29dp"
+            android:text="Trang Chủ"
+            android:textColor="@color/material_dynamic_neutral50"
+            android:textSize="50dp"
             />
-        </LinearLayout>
+        </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_below="@+id/content">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/btn_actLogin_login"
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:backgroundTint="@color/black"
-                android:text="Profile"
-                android:textSize="15dp"
-                />
-
-            <Button
-                android:id="@+id/btn_actLogin_signup"
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:backgroundTint="@color/black"
-                android:text="Danh Sách"
-                android:textSize="15dp"
-                />
-
-        </LinearLayout>
 
     </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+            <RelativeLayout
+                android:id="@+id/btn_ListView"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/vien">
+                <ImageView
+                    android:id="@+id/imagesV"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/listview"
+                    android:layout_marginTop="2dp"/>
+                <TextView
+                    android:layout_below="@+id/imagesV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ListView"
+                    android:layout_marginLeft="-15dp"
+                    android:textSize="18dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/btn_Profile"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/vien">
+                <ImageView
+                    android:id="@+id/imagesP"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/imagesuser" />
+                <TextView
+                    android:layout_below="@+id/imagesP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:layout_marginLeft="-5dp"
+                    android:textSize="18dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 </RelativeLayout>

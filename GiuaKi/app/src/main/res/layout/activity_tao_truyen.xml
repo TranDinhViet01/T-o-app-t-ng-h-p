@@ -28,25 +28,48 @@
                 android:orientation="vertical"
                 android:gravity="center">
                     <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/vien">
+                            <ImageView
+                                android:layout_width="150dp"
+                                android:layout_height="209dp"
+                                android:src="@drawable/items"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tên Truyện"
+                        android:textSize="40dp"/>
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:id="@+id/content">
-                            <EditText
+                            <TextView
                                 android:id="@+id/TheLoai"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:ems="15"
-                                android:hint="Thể loại truyện"
+                                android:hint="Thể loại truyện : Võng du"
                                 android:textSize="20dp" />
-                            <EditText
+                            <TextView
+                                android:id="@+id/sochuong"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="15"
+                                android:hint="Số Chương : "
+                                android:textSize="20dp" />
+                            <TextView
                                 android:id="@+id/MoTaTruyen"
                                 android:layout_width="wrap_content"
                                 android:layout_height="160dp"
                                 android:layout_marginBottom="10dp"
                                 android:ems="15"
-                                android:hint="Mô tả truyện"
+                                android:hint="Mô tả truyện :"
                                 android:textSize="20dp"
                                 android:gravity="top"/>
 
@@ -62,12 +85,12 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
                                     <Button
-                                        android:id="@+id/ThemDS"
+                                        android:id="@+id/BDdoc"
                                         android:layout_width="140dp"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="15dp"
                                         android:backgroundTint="@color/black"
-                                        android:text="Thêm Vào Danh Sách"
+                                        android:text="Bất Đầu Đọc"
                                         android:textSize="15dp" />
                             </LinearLayout>
                     </LinearLayout>

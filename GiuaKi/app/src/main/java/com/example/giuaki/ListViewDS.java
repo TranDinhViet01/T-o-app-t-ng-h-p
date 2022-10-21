@@ -25,6 +25,7 @@ public class ListViewDS extends AppCompatActivity {
     Button Back;
     Button Add;
     Button AddTruyen;
+    int stop = 0;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +44,29 @@ public class ListViewDS extends AppCompatActivity {
         ArrayTruyen.add(new Truyen( R.drawable.items,"Trấn Long Đình","849","0"));
         adapter = new AdapterTruyen(ListViewDS.this, R.layout.activity_items, ArrayTruyen);
         lv.setAdapter(adapter);
+        View dk = findViewById(R.id.btn_Profile);
+        dk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ListViewDS.this, Profile.class);
+                startActivity(intent);
+            }
+        });
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                if(stop == 0) {
+                    Intent intent = new Intent(ListViewDS.this, TaoTruyen.class);
+                    startActivity(intent);
+                }
+                else
+                    stop = 0;
+            }
+        });
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                stop = 1;
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(ListViewDS.this);
                 alertDialog.setTitle("Thông Báo!");
                 alertDialog.setMessage("Bạn có chắc chắn muốn xóa Items này?");
@@ -92,12 +113,7 @@ public class ListViewDS extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
             }
         });
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(ListViewDS.this, TaoTruyen.class);
-                startActivity(intent);
-            }
-        });
+
+
     }
 }
